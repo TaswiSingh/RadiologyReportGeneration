@@ -1,7 +1,8 @@
 # Virtual environment
 venv/
+.env
 
-# Python cache
+# Python
 __pycache__/
 *.pyc
 
@@ -11,16 +12,12 @@ desktop.ini
 # Jupyter
 .ipynb_checkpoints/
 
-# Model checkpoints
-*.pth
+# Model files
 *.pt
-
-# Vocabulary files (optional)
+*.pth
+*.ckpt
 *.pkl
-# Ignore dataset and images
+
+# Dataset
+data/
 images/
-data/indiana_reports.csv
-data/indiana_projections.csv
-data/train.csv
-data/val.csv
-data/test.csv
