@@ -1,9 +1,23 @@
-data/
-*.pt
-*.ckpt
-__pycache__/
-.env
-.ipynb_checkpoints/
+# Virtual environment
 venv/
-env/
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Windows
 desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model files
+*.pt
+*.pth
+*.ckpt
+*.pkl
+
+# Dataset
+data/
+images/
