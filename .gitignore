@@ -1,0 +1,26 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Windows
+desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model checkpoints
+*.pth
+*.pt
+
+# Vocabulary files (optional)
+*.pkl
+# Ignore dataset and images
+images/
+data/indiana_reports.csv
+data/indiana_projections.csv
+data/train.csv
+data/val.csv
+data/test.csv
