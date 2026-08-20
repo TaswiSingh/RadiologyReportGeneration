@@ -1,0 +1,12 @@
+torch
+torchvision
+pandas
+numpy
+scikit-learn
+Pillow
+tqdm
+nltk
+matplotlib
+PyYAML
+rouge-score
+sacrebleu
