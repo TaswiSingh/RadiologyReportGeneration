@@ -23,7 +23,7 @@ VOCAB_PATH = "data/vocab.pkl"
 CHECKPOINT_DIR = "checkpoints"
 
 BATCH_SIZE = 2
-EPOCHS = 1
+EPOCHS = 5
 
 LEARNING_RATE = 1e-4
 WEIGHT_DECAY = 1e-4
@@ -33,8 +33,8 @@ MAX_LENGTH = 128
 DEVICE = torch.device("cpu")
 
 # CPU smoke test
-MAX_TRAIN_BATCHES = 5
-MAX_VAL_BATCHES = 5
+MAX_TRAIN_BATCHES = 300
+MAX_VAL_BATCHES = 100
 
 
 # ============================================================
