@@ -207,17 +207,42 @@ for step in range(GENERATION_LENGTH):
     # Get prediction for the last token
     next_token_logits = logits[:, -1, :]
 
-    # Greedy decoding
+# ========================================================
+# Repetition-aware greedy decoding
+# ========================================================
+
+# Prevent immediate repetition of the same token
+    if len(generated_ids) >= 2:
+
+      previous_token = generated_ids[-1]
+
+      next_token_logits[0, previous_token] = -float("inf")
+
+
+# Prevent repeating tokens that appeared very recently
+    if len(generated_ids) >= 8:
+
+      recent_tokens = generated_ids[-8:]
+
+      for token_id in set(recent_tokens):
+           next_token_logits[0, token_id] *= 0.5
+
+
+# Never generate BOS again
+    next_token_logits[0, bos_id] = -float("inf")
+
+
+# Select highest-probability token
     next_token_id = torch.argmax(
-        next_token_logits,
-        dim=-1
+       next_token_logits,
+       dim=-1
     ).item()
 
     generated_ids.append(next_token_id)
 
     # Stop when EOS is generated
     if next_token_id == eos_id:
-        break
+      break
 
 
 # ============================================================
