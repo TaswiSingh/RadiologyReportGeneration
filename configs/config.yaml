@@ -1,0 +1,30 @@
+# Dataset
+data:
+  train_csv: data/train.csv
+  val_csv: data/val.csv
+  image_dir: images/images_normalized
+  vocab_path: data/vocab.pkl
+
+# Image
+image:
+  size: 224
+
+# Model
+model:
+  d_model: 512
+  nhead: 8
+  decoder_layers: 4
+  dim_feedforward: 2048
+  dropout: 0.1
+  max_length: 128
+
+# Training
+training:
+  batch_size: 2
+  epochs: 1
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  num_workers: 0
+
+# System
+device: cpu
