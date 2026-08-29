@@ -1,23 +1,26 @@
-from torch.utils.data import DataLoader
+﻿import torch
 
 from dataset import ChestXrayDataset, collate_fn
+from torch.utils.data import DataLoader
 
 
-CSV_PATH = "../data/train.csv"
-IMG_DIR = "../images/images_normalized"
-VOCAB_PATH = "../data/vocab.pkl"
+CSV_PATH = "data/train.csv"
+IMAGE_DIR = "images/images_normalized"
+VOCAB_PATH = "data/vocab.pkl"
+
+MAX_LENGTH = 128
 
 
 print("Using CSV:", CSV_PATH)
-print("Using image directory:", IMG_DIR)
+print("Using image directory:", IMAGE_DIR)
 print("Using vocabulary:", VOCAB_PATH)
 
 
 dataset = ChestXrayDataset(
     csv_path=CSV_PATH,
-    img_dir=IMG_DIR,
+    img_dir=IMAGE_DIR,
     vocab_path=VOCAB_PATH,
-    max_length=128
+    max_length=MAX_LENGTH
 )
 
 
@@ -26,27 +29,34 @@ print("\nDataset Size:", len(dataset))
 
 sample = dataset[0]
 
-print("\n--- Single Sample ---")
 
-print("Filename:")
+print("\nSample keys:")
+print(sample.keys())
+
+
+print("\nFilename:")
 print(sample["filename"])
+
 
 print("\nImage shape:")
 print(sample["image"].shape)
 
+
 print("\nInput IDs shape:")
 print(sample["input_ids"].shape)
 
-print("\nInput IDs:")
-print(sample["input_ids"][:20])
 
 print("\nReport:")
-print(sample["report"][:300])
+print(sample["report"])
 
+
+# ============================================================
+# TEST COLLATE FUNCTION
+# ============================================================
 
 loader = DataLoader(
     dataset,
-    batch_size=4,
+    batch_size=2,
     shuffle=False,
     num_workers=0,
     collate_fn=collate_fn
@@ -56,19 +66,27 @@ loader = DataLoader(
 batch = next(iter(loader))
 
 
-print("\n--- Batch ---")
+print("\n========================================")
+print("COLLATE FUNCTION TEST")
+print("========================================")
 
-print("Images shape:")
+
+print("\nBatch keys:")
+print(batch.keys())
+
+
+print("\nBatch image shape:")
 print(batch["images"].shape)
 
-print("Input IDs shape:")
+
+print("\nBatch input IDs shape:")
 print(batch["input_ids"].shape)
 
-print("Attention mask shape:")
+
+print("\nBatch attention mask shape:")
 print(batch["attention_mask"].shape)
 
-print("\nFilenames:")
-print(batch["filenames"])
 
-print("\nAttention mask:")
-print(batch["attention_mask"])
+print("\n========================================")
+print("DATASET TEST PASSED!")
+print("========================================")
