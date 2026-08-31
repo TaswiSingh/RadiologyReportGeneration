@@ -1,0 +1,15 @@
+abnormality,reference_present,generated_present,true_positive,false_negative,false_positive,true_negative,recall,precision
+nodule,3,0,0,3,0,97,0.0,0.0
+opacity,6,0,0,6,0,94,0.0,0.0
+atelectasis,16,0,0,16,0,84,0.0,0.0
+effusion,4,0,0,4,0,96,0.0,0.0
+pneumonia,0,0,0,0,0,100,0.0,0.0
+consolidation,0,0,0,0,0,100,0.0,0.0
+cardiomegaly,9,0,0,9,0,91,0.0,0.0
+pneumothorax,2,0,0,2,0,98,0.0,0.0
+fracture,4,0,0,4,0,96,0.0,0.0
+mass,1,0,0,1,0,99,0.0,0.0
+edema,1,0,0,1,0,99,0.0,0.0
+infiltrate,6,0,0,6,0,94,0.0,0.0
+granuloma,8,0,0,8,0,92,0.0,0.0
+scoliosis,1,0,0,1,0,99,0.0,0.0
