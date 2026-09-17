@@ -1,14 +1,5 @@
 # Virtual environment
 venv/
-<<<<<<< HEAD
-.venv/
-env/
-
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
-=======
 .env
 
 # Python
@@ -17,58 +8,10 @@ __pycache__/
 
 # Windows
 desktop.ini
->>>>>>> origin/person1-ml
 
 # Jupyter
 .ipynb_checkpoints/
 
-<<<<<<< HEAD
-# IDE
-.vscode/
-.idea/
-
-# Windows
-desktop.ini
-Thumbs.db
-
-# Temporary files
-*.tmp
-*.temp
-tempCodeRunnerFile.*
-*.log
-
-# Dataset
-data/raw/
-data/images/
-*.dcm
-*.png
-*.jpg
-*.jpeg
-*.zip
-*.tar
-*.tar.gz
-
-# Large image directories
-images/
-!images/.gitkeep
-
-# Model checkpoints
-checkpoints/*
-!checkpoints/.gitkeep
-*.pth
-*.pt
-*.ckpt
-
-# Experiment outputs
-results/
-runs/
-logs/
-
-# OS files
-.DS_Store
-evaluation/results.csv
-evaluation/beam_results.csv
-=======
 # Model files
 *.pt
 *.pth
@@ -78,4 +21,3 @@ evaluation/beam_results.csv
 # Dataset
 data/
 images/
->>>>>>> origin/person1-ml

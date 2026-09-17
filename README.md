@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-# Radiology Report Generation from Chest X-rays
-
-Deep learning project for automatic radiology report generation from chest X-ray images.
-
-## Architecture
-
-Chest X-ray → DenseNet-121 → Visual Feature Projection → Cross-Attention → Transformer Decoder → Generated Radiology Report
-
-## Baseline
-
-DenseNet-121 → Transformer Decoder
-
-## Proposed Model
-
-DenseNet-121 → Feature Projection → Cross-Attention → Transformer Decoder
-
-## Dataset
-
-Indiana University / IU X-Ray dataset.
-
-## Status
-
-Day 0 - Project Setup
-=======
 # RadiologyReportGeneration
 
 A Transformer-based deep learning system for **automatic radiology report generation from chest X-ray images**.
@@ -473,4 +448,3 @@ Abnormality analysis
 The current results demonstrate that the model can generate structured radiology-style text, while the abnormality analysis highlights the main limitation of the current training setup: **difficulty in reliably generating clinically important abnormalities**.
 
 This provides a clear foundation for future work involving better visual-language alignment, abnormality-aware training, stronger pretrained models, and clinically focused evaluation.
->>>>>>> origin/person1-ml

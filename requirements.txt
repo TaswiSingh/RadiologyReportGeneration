@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-torch
-torchvision
-pandas
-numpy
-scikit-learn
-Pillow
-tqdm
-nltk
-matplotlib
-PyYAML
-rouge-score
-sacrebleu
-=======
 streamlit==1.49.1
 torch==2.7.1
 torchvision==0.22.1
 pillow==11.3.0
 numpy<2.0
->>>>>>> origin/person1-ml
