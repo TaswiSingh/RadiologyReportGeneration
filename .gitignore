@@ -1,5 +1,6 @@
 # Virtual environment
 venv/
+<<<<<<< HEAD
 .venv/
 env/
 
@@ -7,10 +8,21 @@ env/
 __pycache__/
 *.py[cod]
 *.pyo
+=======
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Windows
+desktop.ini
+>>>>>>> origin/person1-ml
 
 # Jupyter
 .ipynb_checkpoints/
 
+<<<<<<< HEAD
 # IDE
 .vscode/
 .idea/
@@ -56,3 +68,14 @@ logs/
 .DS_Store
 evaluation/results.csv
 evaluation/beam_results.csv
+=======
+# Model files
+*.pt
+*.pth
+*.ckpt
+*.pkl
+
+# Dataset
+data/
+images/
+>>>>>>> origin/person1-ml

@@ -1,0 +1,15 @@
+abnormality,reference,generated,detected,missed,recall
+nodule,7,0,0,7,0.0
+opacity,10,0,0,10,0.0
+atelectasis,16,0,0,16,0.0
+effusion,78,98,76,2,0.9743589743589743
+pneumonia,1,0,0,1,0.0
+consolidation,27,68,14,13,0.5185185185185185
+cardiomegaly,9,0,0,9,0.0
+pneumothorax,66,97,64,2,0.9696969696969697
+fracture,6,0,0,6,0.0
+mass,4,0,0,4,0.0
+edema,5,4,0,5,0.0
+infiltrate,18,0,0,18,0.0
+granuloma,16,0,0,16,0.0
+scoliosis,3,0,0,3,0.0
